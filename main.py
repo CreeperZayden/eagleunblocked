@@ -1,7 +1,7 @@
 from keep_alive import keep_alive
 
-# Start the Flask app
+# Start the Flask server
 keep_alive()
 
-# Main code logic (if any)
-print("Flask app is running in the background...")
+# Any additional logic you need can be added here.
+print("Flask app is running...")
