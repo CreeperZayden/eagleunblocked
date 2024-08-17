@@ -1,22 +1,22 @@
 from flask import Flask, render_template
 from threading import Thread
 
-# Create a Flask app instance
+# Initialize the Flask app
 app = Flask(__name__)
 
-# Define a route for the home page
+# Define the route for the home page
 @app.route('/')
 def home():
-    # Render the HTML template
-    return render_template('name.html')
+    # Render the name.html template
+    return render_template('eaglecraft.1.8.8.html')
 
-# Function to run the Flask app
+# Function to run the Flask server
 def run():
-    # Run the Flask app with debug mode enabled for detailed error logs
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    # Run the app with debug mode enabled on port 5000
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
-# Function to keep the server alive by running it in a separate thread
+# Function to keep the Flask server running in the background
 def keep_alive():
-    # Create and start a new thread to run the Flask app
+    # Start the server in a new thread
     t = Thread(target=run)
     t.start()
