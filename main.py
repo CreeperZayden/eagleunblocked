@@ -1,15 +1,7 @@
-from flask import Flask, render_template
-from threading import Thread
+from keep_alive import keep_alive
 
-app = Flask(__name__)
+# Start the Flask app
+keep_alive()
 
-@app.route('/')
-def home():
-    return render_template('eaglecraft.1.8.8.html')
-
-def run():
-    app.run(host='0.0.0.0', port=8080)
-
-def keep_alive():
-    t = Thread(target=run)
-    t.start()
+# Main code logic (if any)
+print("Flask app is running in the background...")
