@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     # Render the name.html template
-    return render_template('eaglecraft.1.8.8.html')
+    return render_template('eaglercraft.1.8.8.html')
 
 # Function to run the Flask server
 def keep_alive():
